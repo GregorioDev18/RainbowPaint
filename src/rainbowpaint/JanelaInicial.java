@@ -16,6 +16,8 @@ public class JanelaInicial extends javax.swing.JFrame {
         jlTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Rainbow Paint");
+        setPreferredSize(new java.awt.Dimension(900, 500));
         setResizable(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -35,7 +37,7 @@ public class JanelaInicial extends javax.swing.JFrame {
             .addGroup(jpPainelInicialLayout.createSequentialGroup()
                 .addGap(118, 118, 118)
                 .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         jpPainelInicialLayout.setVerticalGroup(
             jpPainelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
