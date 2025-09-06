@@ -15,16 +15,17 @@ public class PainelDesenho extends JPanel{
     
     private Stack<Forma> acoesDesfazer;
     private Stack<Forma> acoesRefazer;
-   
+
     public PainelDesenho(){
         formas = new ArrayList<>();
         acoesDesfazer = new Stack<>();
         acoesRefazer = new Stack<>();
     }
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); 
-        
+
         g.setColor(Color.BLACK);
         g.fillRect(0,0,getWidth(),getHeight());
         
@@ -39,7 +40,6 @@ public class PainelDesenho extends JPanel{
         for( Forma forma : formas){
             forma.desenhar(g);
         }
-        
     }
     
     public void limpar(){

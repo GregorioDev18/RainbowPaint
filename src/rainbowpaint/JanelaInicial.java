@@ -65,7 +65,8 @@ public class JanelaInicial extends javax.swing.JFrame {
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
         janelaPrincipal.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
+        
     }//GEN-LAST:event_formKeyPressed
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
