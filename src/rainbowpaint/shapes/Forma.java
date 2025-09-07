@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package rainbowpaint;
+package rainbowpaint.shapes;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-/**
- *
- * @author raiss
- */
 public abstract class Forma {
-    
     protected int x1;
     protected int y1;
     protected int x2;
@@ -23,10 +14,9 @@ public abstract class Forma {
     public Forma(){
         contorno = Color.BLACK;
         preenchimento = Color.WHITE;
-        
     }
     
-    public abstract void desenhar( Graphics g);
+    public abstract void desenhar(Graphics g);
 
     public void setX1(int x1) {
         this.x1 = x1;
@@ -51,5 +41,4 @@ public abstract class Forma {
     public void setPreenchimento(Color preenchimento) {
         this.preenchimento = preenchimento;
     }
-    
 }

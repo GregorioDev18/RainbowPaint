@@ -43,7 +43,7 @@ public class PainelInicial extends JPanel implements ActionListener {
         Graphics2D g2D = (Graphics2D) g;
 
         aplicarSuavizacao(g2D);
-        
+
         g2D.drawImage(fundo, 0, 0, getWidth(), getHeight(), this);
 
         desenharTitulo(g2D);
@@ -53,7 +53,7 @@ public class PainelInicial extends JPanel implements ActionListener {
         g2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
         g2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
     }
-    
+
     private void desenharTitulo(Graphics2D g2D) {
         g2D.setFont(fonte);
         FontMetrics fm = g2D.getFontMetrics();

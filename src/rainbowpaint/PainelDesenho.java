@@ -1,5 +1,6 @@
 package rainbowpaint;
 
+import rainbowpaint.shapes.Forma;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class PainelDesenho extends JPanel{
         formaTemp.desenhar(g);
         }
         
-        for( Forma forma : formas){
+        for(Forma forma : formas){
             forma.desenhar(g);
         }
     }
@@ -68,7 +69,6 @@ public class PainelDesenho extends JPanel{
             repaint();
         }
     }
-   
 
     void desfazer() {
         if (!acoesDesfazer.isEmpty()) {
