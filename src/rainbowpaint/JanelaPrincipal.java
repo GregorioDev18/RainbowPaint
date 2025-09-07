@@ -23,7 +23,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup = new javax.swing.ButtonGroup();
+        bgShapes = new javax.swing.ButtonGroup();
+        bgFilling = new javax.swing.ButtonGroup();
         painelDesenho = new rainbowpaint.PainelDesenho();
         btnDesfazer = new javax.swing.JButton();
         btnRefazer = new javax.swing.JButton();
@@ -36,9 +37,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnLapis = new javax.swing.JToggleButton();
         btnLimpar = new javax.swing.JButton();
         painelCores = new javax.swing.JPanel();
-        painelPreenchimento = new javax.swing.JPanel();
+        fRed = new javax.swing.JToggleButton();
+        fOrange = new javax.swing.JToggleButton();
+        fYellow = new javax.swing.JToggleButton();
+        fGreen = new javax.swing.JToggleButton();
+        fBlue = new javax.swing.JToggleButton();
+        fIndigo = new javax.swing.JToggleButton();
+        fViolet = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         painelContorno = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MeuPaint");
@@ -103,7 +111,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         painelFormas.setFocusable(false);
 
         btnLinha.setBackground(new java.awt.Color(204, 0, 204));
-        buttonGroup.add(btnLinha);
+        bgShapes.add(btnLinha);
         btnLinha.setForeground(new java.awt.Color(0, 0, 0));
         btnLinha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/line.png"))); // NOI18N
         btnLinha.setBorder(null);
@@ -118,7 +126,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         });
 
         btnRetangulo.setBackground(new java.awt.Color(204, 0, 204));
-        buttonGroup.add(btnRetangulo);
+        bgShapes.add(btnRetangulo);
         btnRetangulo.setForeground(new java.awt.Color(255, 255, 255));
         btnRetangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/rectangle.png"))); // NOI18N
         btnRetangulo.setBorder(null);
@@ -133,7 +141,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         });
 
         btnElipse.setBackground(new java.awt.Color(204, 0, 204));
-        buttonGroup.add(btnElipse);
+        bgShapes.add(btnElipse);
         btnElipse.setForeground(new java.awt.Color(255, 255, 255));
         btnElipse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/elipse.png"))); // NOI18N
         btnElipse.setBorder(null);
@@ -141,7 +149,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnElipse.setMargin(new java.awt.Insets(0, 0, 0, 0));
         btnElipse.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedElipse.png"))); // NOI18N
 
-        buttonGroup.add(btnTriangulo);
+        bgShapes.add(btnTriangulo);
         btnTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/triangle.png"))); // NOI18N
         btnTriangulo.setBorder(null);
         btnTriangulo.setBorderPainted(false);
@@ -153,7 +161,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup.add(btnLapis);
+        bgShapes.add(btnLapis);
         btnLapis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/pencil.png"))); // NOI18N
         btnLapis.setSelected(true);
         btnLapis.setBorder(null);
@@ -200,8 +208,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnLimpar.setBackground(new java.awt.Color(51, 51, 51));
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setBackground(new java.awt.Color(0, 0, 0));
+        btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/eraser.png"))); // NOI18N
         btnLimpar.setBorder(null);
         btnLimpar.setBorderPainted(false);
@@ -222,43 +230,96 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         painelCores.setBackground(new java.awt.Color(0, 0, 0));
         painelCores.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Filling", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(153, 102, 255))); // NOI18N
         painelCores.setPreferredSize(new java.awt.Dimension(76, 186));
-
-        painelPreenchimento.setBackground(new java.awt.Color(255, 255, 255));
-        painelPreenchimento.setToolTipText("cor do Preenchimento");
-        painelPreenchimento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        painelPreenchimento.setPreferredSize(new java.awt.Dimension(20, 20));
-        painelPreenchimento.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                painelPreenchimentoMouseClicked(evt);
+        painelCores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                painelCoresMousePressed(evt);
             }
         });
 
-        javax.swing.GroupLayout painelPreenchimentoLayout = new javax.swing.GroupLayout(painelPreenchimento);
-        painelPreenchimento.setLayout(painelPreenchimentoLayout);
-        painelPreenchimentoLayout.setHorizontalGroup(
-            painelPreenchimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-        painelPreenchimentoLayout.setVerticalGroup(
-            painelPreenchimentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
+        fRed.setBackground(new java.awt.Color(255, 0, 0));
+        bgFilling.add(fRed);
+        fRed.setSelected(true);
+        fRed.setBorder(null);
+        fRed.setBorderPainted(false);
+        fRed.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fRed.setFocusPainted(false);
+        fRed.setFocusable(false);
+        fRed.setMaximumSize(new java.awt.Dimension(30, 30));
+        fRed.setMinimumSize(new java.awt.Dimension(30, 30));
+        fRed.setPreferredSize(new java.awt.Dimension(30, 30));
+        fRed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fRedMouseClicked(evt);
+            }
+        });
+        fRed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fRedActionPerformed(evt);
+            }
+        });
+
+        fOrange.setBackground(new java.awt.Color(255, 102, 0));
+        bgFilling.add(fOrange);
+        fOrange.setBorder(null);
+        fOrange.setBorderPainted(false);
+
+        fYellow.setBackground(new java.awt.Color(255, 255, 0));
+        bgFilling.add(fYellow);
+        fYellow.setBorder(null);
+        fYellow.setBorderPainted(false);
+
+        fGreen.setBackground(new java.awt.Color(0, 255, 0));
+        bgFilling.add(fGreen);
+        fGreen.setBorder(null);
+        fGreen.setBorderPainted(false);
+
+        fBlue.setBackground(new java.awt.Color(0, 0, 255));
+        bgFilling.add(fBlue);
+        fBlue.setBorder(null);
+        fBlue.setBorderPainted(false);
+
+        fIndigo.setBackground(new java.awt.Color(25, 0, 130));
+        bgFilling.add(fIndigo);
+        fIndigo.setBorder(null);
+        fIndigo.setBorderPainted(false);
+
+        fViolet.setBackground(new java.awt.Color(127, 0, 255));
+        bgFilling.add(fViolet);
+        fViolet.setBorder(null);
+        fViolet.setBorderPainted(false);
 
         javax.swing.GroupLayout painelCoresLayout = new javax.swing.GroupLayout(painelCores);
         painelCores.setLayout(painelCoresLayout);
         painelCoresLayout.setHorizontalGroup(
             painelCoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelCoresLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(painelPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCoresLayout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addGroup(painelCoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fOrange, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fRed, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fYellow, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fGreen, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fBlue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fIndigo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fViolet, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
         painelCoresLayout.setVerticalGroup(
             painelCoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCoresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(painelPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(fRed, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fOrange, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fYellow, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fGreen, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fBlue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fIndigo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fViolet, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -300,7 +361,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpSideBarLayout = new javax.swing.GroupLayout(jpSideBar);
@@ -308,15 +369,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jpSideBarLayout.setHorizontalGroup(
             jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jpSideBarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(painelFormas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpSideBarLayout.createSequentialGroup()
-                        .addComponent(painelCores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(painelFormas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jpSideBarLayout.createSequentialGroup()
+                                .addComponent(painelCores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jSeparator1))
                 .addContainerGap())
+            .addGroup(jpSideBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLimpar)
+                .addGap(22, 22, 22))
         );
         jpSideBarLayout.setVerticalGroup(
             jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,10 +392,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelFormas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(painelCores, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painelCores, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
@@ -379,19 +449,37 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         } else if (btnElipse.isSelected()) {
             forma = new Elipse();
-            
+
         } else if (btnTriangulo.isSelected()) {
             forma = new Triangulo();
-            
+
         } else if (btnLapis.isSelected()) {
             forma = new Lapis();
             ((Lapis) forma).addPonto(evt.getX(), evt.getY());
         }
-
+        
         forma.setX1(evt.getX());
         forma.setY1(evt.getY());
+        
+        if (fRed.isSelected()) {
+            forma.setPreenchimento(Color.RED);
+        } else if (fOrange.isSelected()) {
+            forma.setPreenchimento(Color.ORANGE);
+        } else if (fYellow.isSelected()) {
+            forma.setPreenchimento(Color.YELLOW);
+        } else if (fGreen.isSelected()) {
+            forma.setPreenchimento(Color.GREEN);
+        } else if (fBlue.isSelected()) {
+            forma.setPreenchimento(Color.BLUE);
+        } else if (fIndigo.isSelected()) {
+            forma.setPreenchimento(new Color(86, 5, 145));
+        } else if (fViolet.isSelected()) {
+            forma.setPreenchimento(new Color(127, 0, 255));
+        }
+        
+        
         forma.setContorno(painelContorno.getBackground());
-        forma.setPreenchimento(painelPreenchimento.getBackground());
+        
     }//GEN-LAST:event_painelDesenhoMousePressed
 
     private void painelDesenhoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelDesenhoMouseReleased
@@ -441,14 +529,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_painelContornoMouseClicked
 
-    private void painelPreenchimentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelPreenchimentoMouseClicked
-        Color c = JColorChooser.showDialog(this, "Cor do preenchimento", painelPreenchimento.getBackground());
-
-        if (c != null) {
-            painelPreenchimento.setBackground(c);
-        }
-    }//GEN-LAST:event_painelPreenchimentoMouseClicked
-
     private void btnDesfazerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesfazerActionPerformed
         painelDesenho.desfazer();
     }//GEN-LAST:event_btnDesfazerActionPerformed
@@ -473,8 +553,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLinhaActionPerformed
 
+    private void fRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fRedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fRedActionPerformed
+
+    private void fRedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fRedMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fRedMouseClicked
+
+    private void painelCoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelCoresMousePressed
+
+    }//GEN-LAST:event_painelCoresMousePressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgFilling;
+    private javax.swing.ButtonGroup bgShapes;
     private javax.swing.JButton btnDesfazer;
     private javax.swing.JToggleButton btnElipse;
     private javax.swing.JToggleButton btnLapis;
@@ -483,13 +577,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnRefazer;
     private javax.swing.JToggleButton btnRetangulo;
     private javax.swing.JToggleButton btnTriangulo;
-    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JToggleButton fBlue;
+    private javax.swing.JToggleButton fGreen;
+    private javax.swing.JToggleButton fIndigo;
+    private javax.swing.JToggleButton fOrange;
+    private javax.swing.JToggleButton fRed;
+    private javax.swing.JToggleButton fViolet;
+    private javax.swing.JToggleButton fYellow;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel jpSideBar;
     private javax.swing.JPanel painelContorno;
     private javax.swing.JPanel painelCores;
     private rainbowpaint.PainelDesenho painelDesenho;
     private javax.swing.JPanel painelFormas;
-    private javax.swing.JPanel painelPreenchimento;
     // End of variables declaration//GEN-END:variables
 }
