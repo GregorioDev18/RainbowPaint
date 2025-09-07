@@ -10,17 +10,24 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private Forma forma;
     private final ImageIcon undo;
     private final ImageIcon redo;
-    private final ImageIcon square;
+    private final ImageIcon rectangle;
+    private final ImageIcon elipse;
+    private final ImageIcon line;
 
     public JanelaPrincipal() {
         initComponents();
+        
         undo = new ImageIcon(getClass().getResource("/rainbowpaint/undo.png"));
         redo = new ImageIcon(getClass().getResource("/rainbowpaint/redo.png"));
-        square = new ImageIcon(getClass().getResource("/rainbowpaint/square.png"));
+        rectangle = new ImageIcon(getClass().getResource("/rainbowpaint/rectangle.png"));
+        elipse = new ImageIcon(getClass().getResource("/rainbowpaint/elipse.png"));
+        line = new ImageIcon(getClass().getResource("/rainbowpaint/line.png"));
 
         btnDesfazer.setIcon(new ImageIcon(undo.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
         btnRefazer.setIcon(new ImageIcon(redo.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
-        btnRetangulo.setIcon(new ImageIcon(square.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
+        btnRetangulo.setIcon(new ImageIcon(rectangle.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
+        btnElipse.setIcon(new ImageIcon(elipse.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
+        btnLinhas.setIcon(new ImageIcon(line.getImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH)));
     }
 
     @SuppressWarnings("unchecked")
@@ -96,17 +103,21 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         painelFormas.setForeground(new java.awt.Color(153, 0, 153));
         painelFormas.setFocusable(false);
 
-        btnLinhas.setBackground(new java.awt.Color(153, 0, 153));
+        btnLinhas.setBackground(new java.awt.Color(204, 0, 204));
         buttonGroup.add(btnLinhas);
-        btnLinhas.setForeground(new java.awt.Color(255, 255, 255));
+        btnLinhas.setForeground(new java.awt.Color(0, 0, 0));
         btnLinhas.setSelected(true);
-        btnLinhas.setText("Linha");
+        btnLinhas.setBorder(null);
         btnLinhas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLinhas.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
+        btnRetangulo.setBackground(new java.awt.Color(204, 0, 204));
         buttonGroup.add(btnRetangulo);
         btnRetangulo.setForeground(new java.awt.Color(255, 255, 255));
         btnRetangulo.setBorder(null);
         btnRetangulo.setBorderPainted(false);
+        btnRetangulo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRetangulo.setMargin(new java.awt.Insets(0, 0, 0, 0));
         btnRetangulo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/redo.png"))); // NOI18N
         btnRetangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,30 +128,32 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnElipse.setBackground(new java.awt.Color(204, 0, 204));
         buttonGroup.add(btnElipse);
         btnElipse.setForeground(new java.awt.Color(255, 255, 255));
-        btnElipse.setText("Elipse");
+        btnElipse.setBorder(null);
+        btnElipse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnElipse.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
         javax.swing.GroupLayout painelFormasLayout = new javax.swing.GroupLayout(painelFormas);
         painelFormas.setLayout(painelFormasLayout);
         painelFormasLayout.setHorizontalGroup(
             painelFormasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFormasLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(painelFormasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnElipse)
-                    .addComponent(btnLinhas)
-                    .addComponent(btnRetangulo))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(btnLinhas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(btnRetangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(btnElipse, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         painelFormasLayout.setVerticalGroup(
             painelFormasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelFormasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnLinhas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRetangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnElipse)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(painelFormasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRetangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(btnElipse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLinhas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnLimpar.setBackground(new java.awt.Color(51, 51, 51));
@@ -205,31 +218,32 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jpSideBarLayout.setHorizontalGroup(
             jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpSideBarLayout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
-                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jpSideBarLayout.createSequentialGroup()
-                        .addComponent(painelPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(painelContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnLimpar))
-                .addGap(77, 77, 77))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSideBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(painelFormas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSideBarLayout.createSequentialGroup()
+                        .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jpSideBarLayout.createSequentialGroup()
+                                .addComponent(painelPreenchimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(painelContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnLimpar))
+                        .addGap(77, 77, 77))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpSideBarLayout.createSequentialGroup()
+                        .addComponent(painelFormas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jpSideBarLayout.setVerticalGroup(
             jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpSideBarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelFormas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
+                .addGap(219, 219, 219)
                 .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelContorno, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelPreenchimento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnLimpar)
-                .addGap(15, 15, 15))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelDesenhoLayout = new javax.swing.GroupLayout(painelDesenho);
@@ -241,7 +255,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addComponent(btnDesfazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRefazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 561, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 622, Short.MAX_VALUE)
                 .addComponent(jpSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         painelDesenhoLayout.setVerticalGroup(
