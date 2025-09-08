@@ -77,8 +77,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnDesfazer.setContentAreaFilled(false);
         btnDesfazer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDesfazer.setDefaultCapable(false);
-        btnDesfazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/undo.png"))); // NOI18N
-        btnDesfazer.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/undo.png"))); // NOI18N
+        btnDesfazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedUndo.png"))); // NOI18N
         btnDesfazer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDesfazerActionPerformed(evt);
@@ -95,8 +94,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnRefazer.setMaximumSize(new java.awt.Dimension(30, 30));
         btnRefazer.setMinimumSize(new java.awt.Dimension(30, 30));
         btnRefazer.setPreferredSize(new java.awt.Dimension(30, 30));
-        btnRefazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/redo.png"))); // NOI18N
-        btnRefazer.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/redo.png"))); // NOI18N
+        btnRefazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedRedo.png"))); // NOI18N
         btnRefazer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefazerActionPerformed(evt);
@@ -238,6 +236,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         fRed.setBackground(new java.awt.Color(255, 0, 0));
         bgFilling.add(fRed);
+        fRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/fRed.png"))); // NOI18N
         fRed.setSelected(true);
         fRed.setBorder(null);
         fRed.setBorderPainted(false);
@@ -247,6 +246,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         fRed.setMaximumSize(new java.awt.Dimension(30, 30));
         fRed.setMinimumSize(new java.awt.Dimension(30, 30));
         fRed.setPreferredSize(new java.awt.Dimension(30, 30));
+        fRed.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedFRed.png"))); // NOI18N
         fRed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fRedMouseClicked(evt);
@@ -319,7 +319,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fIndigo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fViolet, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(fViolet, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -361,7 +362,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpSideBarLayout = new javax.swing.GroupLayout(jpSideBar);
@@ -384,7 +385,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jpSideBarLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLimpar)
-                .addGap(22, 22, 22))
+                .addGap(32, 32, 32))
         );
         jpSideBarLayout.setVerticalGroup(
             jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,14 +393,14 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(painelFormas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(painelCores, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(jpSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                    .addComponent(painelCores, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addComponent(btnLimpar)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout painelDesenhoLayout = new javax.swing.GroupLayout(painelDesenho);
