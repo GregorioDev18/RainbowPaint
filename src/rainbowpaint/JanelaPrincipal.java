@@ -260,33 +260,45 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         fOrange.setBackground(new java.awt.Color(255, 102, 0));
         bgFilling.add(fOrange);
+        fOrange.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fOrange.png"))); // NOI18N
         fOrange.setBorder(null);
         fOrange.setBorderPainted(false);
+        fOrange.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFOrange.png"))); // NOI18N
 
         fYellow.setBackground(new java.awt.Color(255, 255, 0));
         bgFilling.add(fYellow);
+        fYellow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fYellow.png"))); // NOI18N
         fYellow.setBorder(null);
         fYellow.setBorderPainted(false);
+        fYellow.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFYellow.png"))); // NOI18N
 
         fGreen.setBackground(new java.awt.Color(0, 255, 0));
         bgFilling.add(fGreen);
+        fGreen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fGreen.png"))); // NOI18N
         fGreen.setBorder(null);
         fGreen.setBorderPainted(false);
+        fGreen.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFGreen.png"))); // NOI18N
 
         fBlue.setBackground(new java.awt.Color(0, 0, 255));
         bgFilling.add(fBlue);
+        fBlue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fBlue.png"))); // NOI18N
         fBlue.setBorder(null);
         fBlue.setBorderPainted(false);
+        fBlue.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFBlue.png"))); // NOI18N
 
         fIndigo.setBackground(new java.awt.Color(25, 0, 130));
         bgFilling.add(fIndigo);
+        fIndigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fAnil.png"))); // NOI18N
         fIndigo.setBorder(null);
         fIndigo.setBorderPainted(false);
+        fIndigo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFAnil.png"))); // NOI18N
 
         fViolet.setBackground(new java.awt.Color(127, 0, 255));
         bgFilling.add(fViolet);
+        fViolet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fViolet.png"))); // NOI18N
         fViolet.setBorder(null);
         fViolet.setBorderPainted(false);
+        fViolet.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFViolet.png"))); // NOI18N
 
         javax.swing.GroupLayout painelCoresLayout = new javax.swing.GroupLayout(painelCores);
         painelCores.setLayout(painelCoresLayout);
@@ -353,7 +365,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
                 .addComponent(painelContorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -383,7 +395,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addComponent(jSeparator1))
                 .addContainerGap())
             .addGroup(jpSideBarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(btnLimpar)
                 .addGap(32, 32, 32))
         );
@@ -408,22 +420,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         painelDesenhoLayout.setHorizontalGroup(
             painelDesenhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDesenhoLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(btnDesfazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(btnDesfazer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRefazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 628, Short.MAX_VALUE)
+                .addComponent(btnRefazer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 614, Short.MAX_VALUE)
                 .addComponent(jpSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         painelDesenhoLayout.setVerticalGroup(
             painelDesenhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelDesenhoLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(painelDesenhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDesfazer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRefazer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jpSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(painelDesenhoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(painelDesenhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRefazer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDesfazer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
