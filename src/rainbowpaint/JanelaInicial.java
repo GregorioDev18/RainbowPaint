@@ -12,8 +12,7 @@ public class JanelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jpPainelInicial = new rainbowpaint.PainelInicial();
-        jlTitulo = new javax.swing.JLabel();
+        painelInicial1 = new rainbowpaint.PainelInicial();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Rainbow Paint");
@@ -29,34 +28,7 @@ public class JanelaInicial extends javax.swing.JFrame {
                 formKeyPressed(evt);
             }
         });
-
-        javax.swing.GroupLayout jpPainelInicialLayout = new javax.swing.GroupLayout(jpPainelInicial);
-        jpPainelInicial.setLayout(jpPainelInicialLayout);
-        jpPainelInicialLayout.setHorizontalGroup(
-            jpPainelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpPainelInicialLayout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(206, Short.MAX_VALUE))
-        );
-        jpPainelInicialLayout.setVerticalGroup(
-            jpPainelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpPainelInicialLayout.createSequentialGroup()
-                .addGap(174, 174, 174)
-                .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpPainelInicial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpPainelInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(painelInicial1, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
@@ -76,7 +48,6 @@ public class JanelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_formMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jlTitulo;
-    private rainbowpaint.PainelInicial jpPainelInicial;
+    private rainbowpaint.PainelInicial painelInicial1;
     // End of variables declaration//GEN-END:variables
 }

@@ -61,7 +61,7 @@
                   <Component id="btnDesfazer" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnRefazer" min="-2" pref="30" max="-2" attributes="0"/>
-                  <EmptySpace pref="630" max="32767" attributes="0"/>
+                  <EmptySpace pref="628" max="32767" attributes="0"/>
                   <Component id="jpSideBar" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -90,7 +90,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rainbowpaint/undo.png"/>
+              <Image iconType="3" name="/rainbowpaint/imgs/undo.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -102,7 +102,7 @@
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rainbowpaint/selectedUndo.png"/>
+              <Image iconType="3" name="/rainbowpaint/imgs/selectedUndo.png"/>
             </Property>
           </Properties>
           <Events>
@@ -118,7 +118,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rainbowpaint/redo.png"/>
+              <Image iconType="3" name="/rainbowpaint/imgs/redo.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -136,7 +136,7 @@
               <Dimension value="[30, 30]"/>
             </Property>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/rainbowpaint/selectedRedo.png"/>
+              <Image iconType="3" name="/rainbowpaint/imgs/selectedRedo.png"/>
             </Property>
           </Properties>
           <Events>
@@ -163,7 +163,7 @@
                                   <Component id="painelFormas" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="painelCores" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -277,7 +277,7 @@
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/line.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/line.png"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -290,7 +290,7 @@
                       <Insets value="[0, 0, 0, 0]"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedLine.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedLine.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -309,7 +309,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/rectangle.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/rectangle.png"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -322,7 +322,7 @@
                       <Insets value="[0, 0, 0, 0]"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedRectangle.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedRectangle.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -341,7 +341,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/elipse.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/elipse.png"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -353,7 +353,7 @@
                       <Insets value="[0, 0, 0, 0]"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedElipse.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedElipse.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -363,7 +363,7 @@
                       <ComponentRef name="bgShapes"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/triangle.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/triangle.png"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -373,7 +373,7 @@
                       <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedTriangle.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedTriangle.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -386,7 +386,7 @@
                       <ComponentRef name="bgShapes"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/pencil.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/pencil.png"/>
                     </Property>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -394,7 +394,7 @@
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedPencil.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedPencil.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -412,7 +412,7 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/rainbowpaint/eraser.png"/>
+                  <Image iconType="3" name="/rainbowpaint/imgs/eraser.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -423,7 +423,7 @@
                   <Color id="Hand Cursor"/>
                 </Property>
                 <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/rainbowpaint/selectedEraser.png"/>
+                  <Image iconType="3" name="/rainbowpaint/imgs/selectedEraser.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -456,7 +456,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="23" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="fOrange" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="fRed" min="-2" pref="20" max="-2" attributes="0"/>
@@ -486,7 +486,7 @@
                           <Component id="fIndigo" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="fViolet" min="-2" pref="20" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -501,7 +501,7 @@
                       <ComponentRef name="bgFilling"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/fRed.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/fRed.png"/>
                     </Property>
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -523,7 +523,7 @@
                       <Dimension value="[30, 30]"/>
                     </Property>
                     <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/rainbowpaint/selectedFRed.png"/>
+                      <Image iconType="3" name="/rainbowpaint/imgs/selectedFRed.png"/>
                     </Property>
                   </Properties>
                   <Events>

@@ -71,13 +71,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         btnDesfazer.setBackground(new java.awt.Color(255, 255, 255));
         btnDesfazer.setForeground(new java.awt.Color(255, 255, 255));
-        btnDesfazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/undo.png"))); // NOI18N
+        btnDesfazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/undo.png"))); // NOI18N
         btnDesfazer.setBorder(null);
         btnDesfazer.setBorderPainted(false);
         btnDesfazer.setContentAreaFilled(false);
         btnDesfazer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDesfazer.setDefaultCapable(false);
-        btnDesfazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedUndo.png"))); // NOI18N
+        btnDesfazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedUndo.png"))); // NOI18N
         btnDesfazer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDesfazerActionPerformed(evt);
@@ -86,7 +86,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         btnRefazer.setBackground(new java.awt.Color(255, 255, 255));
         btnRefazer.setForeground(new java.awt.Color(255, 255, 255));
-        btnRefazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/redo.png"))); // NOI18N
+        btnRefazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/redo.png"))); // NOI18N
         btnRefazer.setBorderPainted(false);
         btnRefazer.setContentAreaFilled(false);
         btnRefazer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -94,7 +94,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnRefazer.setMaximumSize(new java.awt.Dimension(30, 30));
         btnRefazer.setMinimumSize(new java.awt.Dimension(30, 30));
         btnRefazer.setPreferredSize(new java.awt.Dimension(30, 30));
-        btnRefazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedRedo.png"))); // NOI18N
+        btnRefazer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedRedo.png"))); // NOI18N
         btnRefazer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRefazerActionPerformed(evt);
@@ -111,12 +111,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnLinha.setBackground(new java.awt.Color(204, 0, 204));
         bgShapes.add(btnLinha);
         btnLinha.setForeground(new java.awt.Color(0, 0, 0));
-        btnLinha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/line.png"))); // NOI18N
+        btnLinha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/line.png"))); // NOI18N
         btnLinha.setBorder(null);
         btnLinha.setBorderPainted(false);
         btnLinha.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLinha.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnLinha.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedLine.png"))); // NOI18N
+        btnLinha.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedLine.png"))); // NOI18N
         btnLinha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLinhaActionPerformed(evt);
@@ -126,12 +126,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnRetangulo.setBackground(new java.awt.Color(204, 0, 204));
         bgShapes.add(btnRetangulo);
         btnRetangulo.setForeground(new java.awt.Color(255, 255, 255));
-        btnRetangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/rectangle.png"))); // NOI18N
+        btnRetangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/rectangle.png"))); // NOI18N
         btnRetangulo.setBorder(null);
         btnRetangulo.setBorderPainted(false);
         btnRetangulo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRetangulo.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnRetangulo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedRectangle.png"))); // NOI18N
+        btnRetangulo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedRectangle.png"))); // NOI18N
         btnRetangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRetanguloActionPerformed(evt);
@@ -141,18 +141,18 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         btnElipse.setBackground(new java.awt.Color(204, 0, 204));
         bgShapes.add(btnElipse);
         btnElipse.setForeground(new java.awt.Color(255, 255, 255));
-        btnElipse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/elipse.png"))); // NOI18N
+        btnElipse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/elipse.png"))); // NOI18N
         btnElipse.setBorder(null);
         btnElipse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnElipse.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        btnElipse.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedElipse.png"))); // NOI18N
+        btnElipse.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedElipse.png"))); // NOI18N
 
         bgShapes.add(btnTriangulo);
-        btnTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/triangle.png"))); // NOI18N
+        btnTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/triangle.png"))); // NOI18N
         btnTriangulo.setBorder(null);
         btnTriangulo.setBorderPainted(false);
         btnTriangulo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnTriangulo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedTriangle.png"))); // NOI18N
+        btnTriangulo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedTriangle.png"))); // NOI18N
         btnTriangulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTrianguloActionPerformed(evt);
@@ -160,11 +160,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         });
 
         bgShapes.add(btnLapis);
-        btnLapis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/pencil.png"))); // NOI18N
+        btnLapis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/pencil.png"))); // NOI18N
         btnLapis.setSelected(true);
         btnLapis.setBorder(null);
         btnLapis.setBorderPainted(false);
-        btnLapis.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedPencil.png"))); // NOI18N
+        btnLapis.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedPencil.png"))); // NOI18N
         btnLapis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLapisActionPerformed(evt);
@@ -208,12 +208,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         btnLimpar.setBackground(new java.awt.Color(0, 0, 0));
         btnLimpar.setForeground(new java.awt.Color(0, 0, 0));
-        btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/eraser.png"))); // NOI18N
+        btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/eraser.png"))); // NOI18N
         btnLimpar.setBorder(null);
         btnLimpar.setBorderPainted(false);
         btnLimpar.setContentAreaFilled(false);
         btnLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLimpar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedEraser.png"))); // NOI18N
+        btnLimpar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedEraser.png"))); // NOI18N
         btnLimpar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnLimparMouseClicked(evt);
@@ -236,7 +236,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         fRed.setBackground(new java.awt.Color(255, 0, 0));
         bgFilling.add(fRed);
-        fRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/fRed.png"))); // NOI18N
+        fRed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/fRed.png"))); // NOI18N
         fRed.setSelected(true);
         fRed.setBorder(null);
         fRed.setBorderPainted(false);
@@ -246,7 +246,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         fRed.setMaximumSize(new java.awt.Dimension(30, 30));
         fRed.setMinimumSize(new java.awt.Dimension(30, 30));
         fRed.setPreferredSize(new java.awt.Dimension(30, 30));
-        fRed.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/selectedFRed.png"))); // NOI18N
+        fRed.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/rainbowpaint/imgs/selectedFRed.png"))); // NOI18N
         fRed.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 fRedMouseClicked(evt);
@@ -293,7 +293,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         painelCoresLayout.setHorizontalGroup(
             painelCoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCoresLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
                 .addGroup(painelCoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(fOrange, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fRed, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,7 +320,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addComponent(fIndigo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fViolet, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -378,7 +378,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                             .addComponent(painelFormas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jpSideBarLayout.createSequentialGroup()
                                 .addComponent(painelCores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jSeparator1))
                 .addContainerGap())
@@ -412,7 +412,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addComponent(btnDesfazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRefazer, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 630, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 628, Short.MAX_VALUE)
                 .addComponent(jpSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         painelDesenhoLayout.setVerticalGroup(

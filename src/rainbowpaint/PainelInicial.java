@@ -32,7 +32,7 @@ public class PainelInicial extends JPanel implements ActionListener {
         timer = new Timer(tempo, this);
         timer.start();
 
-        fundo = new ImageIcon(getClass().getResource("/rainbowpaint/background.png")).getImage();
+        fundo = new ImageIcon(getClass().getResource("/rainbowpaint/imgs/background.png")).getImage();
 
         setFont(fonte);
     }
