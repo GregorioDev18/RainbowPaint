@@ -6,27 +6,27 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import static rainbowpaint.PainelDesenho.aplicarSuavizacao;
 
 public class PainelInicial extends JPanel implements ActionListener {
 
     private final String titulo = "Rainbow Paint";
     private final Color[] cores = {
         Color.RED, Color.ORANGE, Color.YELLOW,
-        Color.GREEN, Color.BLUE, new Color(75, 0, 130), new Color(148, 0, 211)
+        Color.GREEN, Color.BLUE, new Color(86, 5, 145), new Color(127, 0, 255)
     };
     private final Font fonte = new Font("Comic Sans MS", Font.BOLD, 60);
     private final int tempo = 200;
 
     private String textoAtual = "";
     private int index = 0;
-    private Image fundo;
-    private Timer timer;
+    private final Image fundo;
+    private final Timer timer;
 
     public PainelInicial() {
         timer = new Timer(tempo, this);
@@ -49,17 +49,12 @@ public class PainelInicial extends JPanel implements ActionListener {
         desenharTitulo(g2D);
     }
 
-    private void aplicarSuavizacao(Graphics2D g2D) {
-        g2D.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-        g2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-    }
-
     private void desenharTitulo(Graphics2D g2D) {
         g2D.setFont(fonte);
         FontMetrics fm = g2D.getFontMetrics();
 
         int x = (getWidth() - fm.stringWidth(titulo)) / 2;
-        int y = getHeight() / 3;
+        int y = getHeight() / 2;
 
         for (int i = 0; i < textoAtual.length(); i++) {
             g2D.setColor(cores[i % cores.length]);

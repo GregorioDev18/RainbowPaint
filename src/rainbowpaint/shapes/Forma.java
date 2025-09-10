@@ -4,18 +4,19 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public abstract class Forma {
+
     protected int x1;
     protected int y1;
     protected int x2;
     protected int y2;
     protected Color contorno;
     protected Color preenchimento;
-    
-    public Forma(){
+
+    public Forma() {
         contorno = Color.BLACK;
         preenchimento = Color.WHITE;
     }
-    
+
     public abstract void desenhar(Graphics g);
 
     public void setX1(int x1) {

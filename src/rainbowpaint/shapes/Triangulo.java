@@ -11,8 +11,8 @@ public class Triangulo extends Forma {
         int x2d = Math.max(x1, x2);
         int y2d = Math.max(y1, y2);
 
-        int[] xPoints = {x1d, x2d, (x1d + x2d) / 2}; 
-        int[] yPoints = {y2d, y2d, y1d};          
+        int[] xPoints = {x1d, x2d, (x1d + x2d) / 2};
+        int[] yPoints = {y2d, y2d, y1d};
 
         g = g.create();
         g.setColor(preenchimento);
